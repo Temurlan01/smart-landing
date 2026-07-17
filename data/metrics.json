@@ -1,0 +1,15 @@
+{
+  "total_submissions": 45,
+  "by_sentiment": {
+    "neutral": 38,
+    "positive": 5,
+    "negative": 2
+  },
+  "by_type": {
+    "other": 34,
+    "support": 7,
+    "inquiry": 3,
+    "feedback": 1
+  },
+  "last_updated": "2026-07-17T21:56:26.398577"
+}

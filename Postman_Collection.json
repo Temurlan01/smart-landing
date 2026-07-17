@@ -1,0 +1,214 @@
+{
+  "info": {
+    "name": "Developer Landing API",
+    "description": "Backend API для контактной формы лендинга с AI-интеграцией",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. POST Contact Form (Success)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Иван Петров\",\n  \"phone\": \"+71234567890\",\n  \"email\": \"ivan@example.com\",\n  \"comment\": \"Здравствуйте, я заинтересован в сотрудничестве по вашему проекту.\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/contact/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "contact",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. POST Contact (Positive sentiment)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Мария Иванова\",\n  \"phone\": \"+79876543210\",\n  \"email\": \"maria@example.com\",\n  \"comment\": \"Отличный проект! Просто превосходно! Хочу присоединиться к вашей команде, это будет отлично!\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/contact/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "contact",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. POST Contact (Validation Error)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"А\",\n  \"phone\": \"123\",\n  \"email\": \"invalid-email\",\n  \"comment\": \"Короткий\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/contact/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "contact",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. GET Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/health/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "health",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. GET Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/metrics/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "metrics",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. POST AI Fallback Test",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Тест Фолбэка\",\n  \"phone\": \"+7999999999\",\n  \"email\": \"test@example.com\",\n  \"comment\": \"Это тестовое сообщение для проверки fallback механизма когда OpenAI API ключ не установлен или недоступен\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/contact/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "contact",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. GET Swagger/OpenAPI Schema",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/schema/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "schema",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
+

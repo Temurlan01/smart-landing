@@ -203,7 +203,10 @@ cmake-build-*/
 
 # IntelliJ
 out/
-
+ЗАПУСК.md
+ИТОГИ.md
+ПРИМЕРЫ_ЗАПРОСОВ.md
+ЧЕКЛИСТ.md
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
